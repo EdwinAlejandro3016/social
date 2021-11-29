@@ -1,0 +1,38 @@
+<div class="card mb-2">
+    <div class="card-header bg-dark text-white">
+        <h5><i class="far fa-chart-bar"></i> Stats</h5>
+    </div>
+    <div class="card-body">
+        {{#if viewModel.sidebar.stats.images}}
+        <p><i class="fas fa-images"></i> Images: {{viewModel.sidebar.stats.images}}</p>
+        {{/if}}
+
+        {{#if viewModel.sidebar.stats.comments}}
+        <p><i class="fas fa-comments"></i> Comments: {{viewModel.sidebar.stats.comments}}</p>
+        {{/if}}
+
+        {{#if viewModel.sidebar.stats.views}}
+        <p><i class="fas fa-eye"></i> Views: {{viewModel.sidebar.stats.views}}</p>
+        {{/if}}
+
+        {{#if viewModel.sidebar.stats.likes}}
+        <p><i class="fas fa-heart"></i> Likes: {{viewModel.sidebar.stats.likes}}</p>
+        {{/if}}
+
+        {{#if sidebar.stats.images}}
+        <p><i class="fas fa-images"></i> Images: {{sidebar.stats.images}}</p>
+        {{/if}}
+
+        {{#if sidebar.stats.comments}}
+        <p><i class="fas fa-comments"></i> Comments: {{sidebar.stats.comments}}</p>
+        {{/if}}
+
+        {{#if sidebar.stats.views}}
+        <p><i class="fas fa-eye"></i> Views: {{sidebar.stats.views}}</p>
+        {{/if}}
+
+        {{#if sidebar.stats.likes}}
+        <p><i class="fas fa-heart"></i> Likes: {{sidebar.stats.likes}}</p>
+        {{/if}}
+    </div>
+</div>

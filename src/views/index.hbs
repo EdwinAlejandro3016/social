@@ -1,0 +1,41 @@
+<div class="card ">
+    <div class="card-header bg-dark">
+        <h3 class="card-title text-white">
+           <i class="far fa-image"></i> Upload an Image
+        </h3>
+    </div>
+    <div class="card-body">
+        <form action="/images" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile" name="image" aria-describedby="inputGroupFileAddon" required>
+                    <label class="input-group-text" for="inputGroupFile">Browse</label>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <input type="text" name="title" class="form-control" placeholder="Title for the image" required>
+            </div>
+            <div class="form-group mb-3">
+                <textarea name="description" rows="2" class="form-control" placeholder="Description for the image" required></textarea>
+            </div>
+            <button class="btn btn-success"><i class="fas fa-upload"></i> Upload Image</button>
+        </form>
+    </div>
+</div>
+
+<div class="card mt-2">
+    <div class="card-header bg-dark text-white">
+        <h3><i class="far fa-images"></i> Recent Uploads</h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            {{#each viewModel.images}}
+            <div class="col-md-4">
+               <a href="images/{{ uniqueId}}">
+                   <img src="/public/upload/{{ filename }}" alt="" class="w-100 h-100 img-thumbnail">
+               </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
